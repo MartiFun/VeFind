@@ -33,8 +33,8 @@ class About extends React.Component {
       coords: [{"latitude":45.76964,"longitude":4.90117},{"latitude":45.76906,"longitude":4.89937},{"latitude":45.76869,"longitude":4.8996},{"latitude":45.76765,"longitude":4.90035},{"latitude":45.76734,"longitude":4.90052},{"latitude":45.76715,"longitude":4.90054}],
       cordStart: null,
       cordEnd: null,
-      distance: " :(",
-      duree: " :(",
+      distance: null,
+      duree: null,
       loadDest: false,
       isLoggedIn: false,
       respJSON: null,
@@ -156,7 +156,7 @@ class About extends React.Component {
                 )}
             </MapView>
             <View visible={false} style={styles.destyle}>
-                <Text>{this.state.instruction}</Text>
+                <Text style={styles.destyleElement}>{this.state.instruction}</Text>
             </View>
             <View style={styles.destyle}>
               <Text style={styles.destyleElement}>Distance: {this.state.distance}</Text>
